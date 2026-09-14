@@ -1,0 +1,20 @@
+---
+interface Props {
+	date: Date;
+}
+
+const { date } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>
+	{
+		date.toLocaleDateString('en-us', {
+			// Posts carry a date-only pubDate, stored as UTC midnight. Formatting in
+			// the build machine's local zone would shift the day west of UTC.
+			timeZone: 'UTC',
+			year: 'numeric',
+			month: 'short',
+			day: 'numeric',
+		})
+	}
+</time>
