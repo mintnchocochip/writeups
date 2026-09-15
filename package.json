@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "node --test scripts/*.test.mjs",
-    "import": "node scripts/import-notion.mjs"
+    "import": "node scripts/import-writeups.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.1",
